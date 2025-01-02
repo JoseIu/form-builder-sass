@@ -71,3 +71,10 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  align-content: center;
+}

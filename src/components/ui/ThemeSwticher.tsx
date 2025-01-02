@@ -1,20 +1,12 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 import { IoMoonOutline, IoSunnyOutline, IoTvOutline } from 'react-icons/io5';
 import { Tabs, TabsList, TabsTrigger } from './tabs';
 
 export const ThemeSwticher = () => {
   const { theme, setTheme } = useTheme();
 
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
   return (
     <Tabs defaultValue={theme}>
       <TabsList className="p-1 border rounded-md flex items-center gap-2">
