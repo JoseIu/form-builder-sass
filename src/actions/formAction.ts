@@ -3,7 +3,11 @@
 import prisma from '@/lib/prisma';
 import { currentUser } from '@clerk/nextjs/server';
 
-class UserNotFoundError extends Error {}
+class UserNotFoundError extends Error {
+  constructor() {
+    super('User not found');
+  }
+}
 
 export const getStatsForm = async () => {
   const user = await currentUser();
@@ -23,6 +27,7 @@ export const getStatsForm = async () => {
   const submissions = stats._sum.submissions ?? 0;
 
   const submissionRate = visits > 0 ? (submissions / visits) * 100 : 0;
+  //TODO: check if this is correct
   const bounceRate = 100 - submissionRate;
 
   return {
