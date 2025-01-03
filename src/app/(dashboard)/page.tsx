@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 
 export default function Home() {
   return (
-    <div>
+    <div className="wrapper p-4">
       <Suspense fallback={<CardsSkeleton />}>
         <CardContainer />
       </Suspense>
