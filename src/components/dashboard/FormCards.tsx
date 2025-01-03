@@ -50,7 +50,7 @@ export const FormCards = async () => {
             )}
             {!form.published && (
               <Link
-                href={`/forms/${form.id}`}
+                href={`/builder/${form.id}`}
                 className="w-full flex justify-center gap-4 bg-primary/80 text-secondary p-2 rounded-md"
               >
                 Edit <IoCreateOutline size={20} />
