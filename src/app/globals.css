@@ -78,3 +78,17 @@ body {
   gap: 1rem;
   align-content: center;
 }
+.wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-builder {
+  height: calc(100dvh - 7.7rem);
+}
+.designer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1rem;
+}
